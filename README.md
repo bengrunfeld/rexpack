@@ -1,34 +1,38 @@
-# Expack - Express and Webpack Boilerplate
+# Rexpack
 
-Expack is the bare-bones Express and Webpack boilerplate with ES6+ babel transpilation, ESLint linting, Hot Module Reloading, and Jest test framework enabled.
+Rexpack is a minimal Express, Webpack, & React boilerplate app that serves an image, adds some styling and some basic functionality, just to show everything working at the most basic level. This project can then be used as a template for other more complex apps.
 
-Expack has two build modes: Development and Production.
+Stack: Node (ES6+), Express, Webpack, React, Jest, and Enzyme that has Hot Module Reloading and can be deployed to Google App Engine with a single command. It has dev and prod builds, where the prod build outputs a minified, uglified bundle where images are encoded in Base64 directly into the css file.
 
-When you run `npm run buildDev`, Javascript, HTML, and CSS files are unminified and not uglified, meaning that you can easily inspect them in Chrome Dev Tools. Hot Module Reloading is enabled via `webpack-dev-middleware` and `webpack-hot-middleware`. 
+Rexpack can be run locally on your machine, or pushed to Google App Engine Flexible Environment.
 
-When you run `npm run buildProd`, Javascript, HTML, and CSS files are all minified and uglified, and images are encoded as Base64 directly into your CSS file, which results in less calls to the server for image files.
+## Installation
 
-## Google App Engine Flex Deployment
-
-Expack can be deployed directly to Google App Engine Flex with the command `npm run deploy`. **IMPORTANT:** Currently `app.yaml` is configured to use minimal resources to save on cost, which is great for development but terrible for production. Please review and update `app.yaml` to suit your own needs.
-
-## Installation & Usage
-
-    npm clone ...
-    cd expack
     npm install
-    
-    npm run buildDev        // for development
-        // OR
+
+## Create a Development build
+
+    npm run buildDev
+
+## Create a Production build
+
     npm run buildProd
-    
-    npm start               // navigate to localhost:8080 for local dev
 
-### For testing
+## Run the code on a local webserver
 
-    npm test                // runs test
-    npm coverage            // generates a coverage report
+    npm start
 
-## Security
+Then navigate to `http://localhost:8080`
 
-Please ensure that your version of Node and NPM are up to date, and run `npm audit` after installation to ensure that no vulnerabilities exist. If they do, follow the audits instructions on how to resolve them. 
+## Deploy to Google App Engine Flex
+
+    npm run deploy
+
+## Run test
+
+    npm test
+
+## Generate coverage report
+
+    npm run coverage
+

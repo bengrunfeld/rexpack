@@ -10,6 +10,7 @@
     "buildProd": "rm -rf dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
     "start": "node ./dist/server.js"
   },
+  "repository": "https://github.com/bengrunfeld/rexpack",
   "keywords": [],
   "author": "",
   "license": "ISC",

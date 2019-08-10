@@ -11,8 +11,8 @@
 
  module.exports = (env, argv) => {
    const SERVER_PATH = (argv.mode === 'production') ?
-     './src/server/server-prod.js' :
-     './src/server/server-dev.js'
+     './src/server/server-prod.ts' :
+     './src/server/server-dev.ts'
 
    return ({
      entry: {
@@ -25,6 +25,9 @@
      },
      mode: argv.mode,
      target: 'node',
+     resolve: {
+       extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+     },
      node: {
        // Need this when working with express, otherwise the build fails
        __dirname: false,   // if you don't put this is, __dirname
@@ -33,6 +36,9 @@
      externals: [nodeExternals()], // Need this to avoid error when working with Express
      module: {
        rules: [
+         // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+         { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+         { test: /\.js$/, loader: "source-map-loader", enforce: "pre", },
          {
            // Transpiles ES6-8 into ES5
            test: /\.js$/,

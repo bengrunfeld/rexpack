@@ -6,7 +6,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/index.js'
+    main: './src/index.tsx'
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -14,7 +14,10 @@ module.exports = {
     filename: '[name].js'
   },
   target: 'web',
-  devtool: '#source-map',
+  devtool: 'source-map',
+  resolve: {
+    extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+  },
   // Webpack 4 does not have a CSS minifier, although
   // Webpack 5 will likely come with one
   optimization: {
@@ -29,6 +32,9 @@ module.exports = {
   },
   module: {
     rules: [
+      // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+      { test: /\.js$/, loader: "source-map-loader", enforce: "pre", },
       {
         // Transpiles ES6-8 into ES5
         test: /\.js$/,

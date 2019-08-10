@@ -4,7 +4,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.js']
+    main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.tsx']
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -13,9 +13,15 @@ module.exports = {
   },
   mode: 'development',
   target: 'web',
-  devtool: '#source-map',
+  devtool: 'source-map',
+  resolve: {
+    extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+  },
   module: {
     rules: [
+      // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+      { test: /\.js$/, loader: "source-map-loader", enforce: "pre", },
       {
         enforce: "pre",
         test: /\.js$/,

@@ -4,7 +4,8 @@
         "allowJs": true,
         "target": "es5",
         "lib": ["es2018", "dom"],
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "jsx": "react"
     },
     "include": [
         "./src/**/*"

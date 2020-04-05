@@ -35,4 +35,8 @@ Then navigate to `http://localhost:8080`
 ## Generate coverage report
 
     npm run coverage
+    
+## TODO
+
+FW support addition
 

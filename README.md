@@ -38,5 +38,5 @@ Then navigate to `http://localhost:8080`
     
 ## TODO
 
-FW support addition
+FW support addition ES6
 

@@ -1,13 +1,14 @@
-# pES.js
-
-<img src="./src/img/time-consuming.png" alt="time-consuming.png" style="width:200px;height:auto;"/>
-<img src="./src/img/spider-web.png" alt="spider-web.png" style="width:200px;height:auto;"/>
+<div> <h1 style="color:#6c757d!important;">pES.<span style="color:#ffc107!important;">js</span></h1></div>
 
 ## Situation:
-  Suppliers are always challenged by having to fill out Product Spec Sheet to add their products to new partner sites (i.e [amazon.com](https://baymard.com/ecommerce-design-examples/45-product-spec-sheet/4852-amazon), [wayfair.com](https://baymard.com/ecommerce-design-examples/45-product-spec-sheet/4900-wayfair), [overstock](https://baymard.com/ecommerce-design-examples/45-product-spec-sheet/4843-overstock).com, and [more](https://baymard.com/product-page/benchmark/page-designs/product-spec-sheet)) It is a time consuming tedious task.  
+  Suppliers are always challenged by having to fill out Product Spec Sheet to add their products to new partner sites (i.e [amazon.com](https://baymard.com/ecommerce-design-examples/45-product-spec-sheet/4852-amazon), [wayfair.com](https://baymard.com/ecommerce-design-examples/45-product-spec-sheet/4900-wayfair), [overstock](https://baymard.com/ecommerce-design-examples/45-product-spec-sheet/4843-overstock).com, and [more](https://baymard.com/product-page/benchmark/page-designs/product-spec-sheet)) It is a time consuming tedious task. [Read More](http://blog.whereoware.com/web-tip-avoid-product-data-pain/2017/04/)
+<br/>
+<img src="./src/img/time-consuming.png" alt="time-consuming.png" style="width:200px;height:auto;"/>
 
 ## Action:
-  To build an app that crawls over the supplier products from any website, given a ULR, and store that data so that it is available at any time for any website. Additionally, build API feature so supplier reduces the time spent adding the products on a partner website.
+  To build Product Information Management Systems (PIMs) app that crawls over the supplier products from any website, given a ULR, and store that data so that it is available at any time for any website. Additionally, build API feature so supplier reduces the time spent adding the products on a partner website.
+<br/>
+<img src="./src/img/spider-web.png" alt="spider-web.png" style="width:200px;height:auto;"/>
 
 ## Expected Outcome:
   To automatically systematically crawl website and store only valuable information such as supplier information (address, contacts, and product info). And build easy prod management. 

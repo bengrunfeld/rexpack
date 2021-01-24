@@ -7,7 +7,7 @@ export default class Footer extends Component {
       <footer className="container py-5">
         <div className="row">
           <div className="col-12 col-md">
-            <Brand size={2} /> 
+            <Brand size={2} />
             <small className="d-block mb-3 text-muted">© 2021</small>
           </div>
           <div className="col-6 col-md">
@@ -45,31 +45,7 @@ export default class Footer extends Component {
               </li>
             </ul>
           </div>
-          <div className="col-6 col-md">
-            <h5>Resources</h5>
-            <ul className="list-unstyled text-small">
-              <li>
-                <a className="text-muted" href="#">
-                  Resource
-                </a>
-              </li>
-              <li>
-                <a className="text-muted" href="#">
-                  Resource name
-                </a>
-              </li>
-              <li>
-                <a className="text-muted" href="#">
-                  Another resource
-                </a>
-              </li>
-              <li>
-                <a className="text-muted" href="#">
-                  Final resource
-                </a>
-              </li>
-            </ul>
-          </div>
+
           <div className="col-6 col-md">
             <h5>Resources</h5>
             <ul className="list-unstyled text-small">

@@ -1,17 +1,16 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import Footer from "./Footer";
-import Brand from './Brand'
-/**
- * Import pages to be rendered
- */
+import Brand from "./Brand";
 import HomeScraper from "./HomeScraper";
 import WelcomePage from "./WelcomePage";
+import Manage_Product from "./secured/Products";
 
 export default function App() {
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg navbar-light bg-nav pl-5">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light pl-5">
         <Brand size={5} />
         <button
           className="navbar-toggler"
@@ -37,6 +36,11 @@ export default function App() {
               </Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" to="/catalog">
+                Catalog
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link" to="/scrape">
                 <span className="text-muted text-secondary">Scrape</span>
               </Link>
@@ -58,6 +62,9 @@ export default function App() {
           <Route path="/scrape">
             <HomeScraper />
           </Route>
+          <Route path="/catalog">
+            <Manage_Product/>
+          </Route>
         </Fragment>
       </Switch>
       <Footer />
@@ -66,5 +73,9 @@ export default function App() {
 }
 
 function About() {
-  return <h2>About</h2>;
+  return (
+    <div className="container mt-5">
+      <h2>About</h2>
+    </div>
+  );
 }

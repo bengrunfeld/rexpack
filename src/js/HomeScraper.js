@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 
+
 export default class HomeScraper extends Component {
   render() {
     return (
       <div className="container mt-5">
         <div className="alert alert-warning" role="alert">
-          This feature is not yet available. We will notify you once it is ready
-          — check back later!
+          This feature is not yet available — check back later!
         </div>
         <br />
-        <div className="card border border-primary w-100">
-          <div className="card-header">Let Us start scraping</div>
+        <div className="card border border-info w-100">
+          <div className="card-header">Lets start scraping</div>
           <div className="card-body">
             <h5 className="card-title">Provide the page URL below</h5>
             <p className="card-text">

@@ -1,9 +1,13 @@
 import React from "react";
 
 function Brand(props) {
+  let { size } = props;
+
   return (
     <a
-      className={`display-${!props ? 4 : props.size} text-secondary  font-weight-normal`}
+      className={`display-${
+        !size ? 4 : size
+      } text-secondary  font-weight-normal`}
       href="/"
     >
       pES.<span className="text-warning">js</span>

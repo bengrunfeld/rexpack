@@ -1,6 +1,6 @@
 
 const router = require('express').Router();
-const {deleteProduct, updateProduct, createProduct, getProducts} = require('../database/product');
+const {deleteProduct, updateProduct, createProduct, getProducts} = require('../databases/product');
 
 router.get('/', async (apiRequest, apiResponse) => {
   apiResponse.send(await getProducts());

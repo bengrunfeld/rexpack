@@ -1,5 +1,19 @@
-h1, h2, h3, h4, h5, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   font-family: helvetica;
   color: #3e3e3e;
 }
 
+.bg-nav {
+  background-color: #e3f2fd !important;
+}
+
+.dontKnow {
+  width: 80%;
+  height: 300px;
+  border-radius: 21px 21px 0 0;
+}

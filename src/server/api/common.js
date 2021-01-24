@@ -1,13 +1,18 @@
 /**
-  All configuration that is required for a shared mongo server hosted in the cloud
+  All configuration that is required 
+  for a shared mongo server hosted in the cloud.
  */
-const {MongoClient} = require('mongodb');
-
+const { MongoClient } = require("mongodb");
 let database = null;
 
 async function startDatabase() {
-  const mongoDBURL = `mongodb://mlab2020:abc123def!@ds031617.mlab.com:31617/learningmongo`;
-  const connection = await MongoClient.connect(mongoDBURL, {useNewUrlParser: true});
+  // pass: D5UHXkRZK3arr3S
+  // user: rick_c137
+  const mongoDBURL = `mongodb+srv://rick_c137:D5UHXkRZK3arr3S@pickupzoo.9vmtd.mongodb.net/<dbname>`;
+  const connection = await MongoClient.connect(mongoDBURL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  });
   database = connection.db();
 }
 
